@@ -268,7 +268,7 @@ class UIValidatorServer {
   constructor() {
     this.server = new Server(
       {
-        name: 'vibe-cooler-ui-validator',
+        name: 'vibecorner-ui-validator',
         version: '1.0.0',
       },
       {

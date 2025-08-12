@@ -293,7 +293,7 @@ export const Dashboard: React.FC = () => {
           <h1 className="animate__animated animate__bounceInDown">
             Welcome back, {user?.name}! 🎉
           </h1>
-          <p className="text-muted animate__animated animate__fadeIn animate__delay-1s">
+          <p className="text-white animate__animated animate__fadeIn animate__delay-1s">
             Here's what's happening with your team today
           </p>
         </div>

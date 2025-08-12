@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 export const AppLayout: React.FC<{ children: React.ReactNode; title?: string }> = ({ 
   children, 
-  title = 'Vibe Cooler' 
+  title = 'VibeCorner' 
 }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();

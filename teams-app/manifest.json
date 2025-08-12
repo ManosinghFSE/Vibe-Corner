@@ -5,7 +5,7 @@
   "id": "{{TEAMS_APP_ID}}",
   "packageName": "com.vibecooler.activityplanner",
   "developer": {
-    "name": "Vibe Cooler Team",
+    "name": "VibeCorner Team",
     "websiteUrl": "https://{{DOMAIN}}",
     "privacyUrl": "https://{{DOMAIN}}/privacy",
     "termsOfUseUrl": "https://{{DOMAIN}}/terms"
@@ -16,11 +16,11 @@
   },
   "name": {
     "short": "Activity Planner",
-    "full": "Vibe Cooler Activity Planner for Teams"
+          "full": "VibeCorner Activity Planner for Teams"
   },
   "description": {
     "short": "Plan stress-relieving team activities with geographic intelligence",
-    "full": "Vibe Cooler Activity Planner helps tech teams discover and plan stress-relieving activities, restaurants, and hotels with real-time availability, weather awareness, and collaborative planning features."
+          "full": "VibeCorner Activity Planner helps tech teams discover and plan stress-relieving activities, restaurants, and hotels with real-time availability, weather awareness, and collaborative planning features."
   },
   "accentColor": "#6264A7",
   "configurableTabs": [

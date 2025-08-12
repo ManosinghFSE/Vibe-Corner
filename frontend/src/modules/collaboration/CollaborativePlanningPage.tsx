@@ -148,7 +148,7 @@ export const CollaborativePlanningPage: React.FC = () => {
                         </div>
                         <div className="d-grid gap-2">
                           <button 
-                            className="btn vc-btn-primary"
+                            className="btn btn-secondary"
                             disabled={session.status === 'ended'}
                             onClick={() => navigate(`/collaborate/${session.id}`)}
                           >
@@ -295,7 +295,7 @@ export const CollaborativePlanningPage: React.FC = () => {
                       <div className="col-md-4">
                         <VotingInterface itemId={activity.id} />
                         <button 
-                          className="btn btn-sm btn-outline-primary mt-2 w-100"
+                          className="btn btn-sm btn-outline-primary mt-2 w-100 add-to-itinerary-btn"
                           onClick={() => handleAddToItinerary(activity)}
                         >
                           <i className="fa-solid fa-plus me-1"></i>
@@ -448,6 +448,47 @@ export const CollaborativePlanningPage: React.FC = () => {
           height: 8px;
           border-radius: 50%;
           display: inline-block;
+        }
+        
+        /* Fix hover states for buttons */
+        .add-to-itinerary-btn:hover {
+          background-color: #0d6efd !important;
+          border-color: #0d6efd !important;
+          color: white !important;
+        }
+        
+        /* Fix voting button hover states */
+        .voting-interface .btn-outline-success:hover {
+          background-color: #198754 !important;
+          border-color: #198754 !important;
+          color: white !important;
+        }
+        
+        .voting-interface .btn-outline-danger:hover {
+          background-color: #dc3545 !important;
+          border-color: #dc3545 !important;
+          color: white !important;
+        }
+        
+        .voting-interface .btn-success:hover {
+          background-color: #157347 !important;
+          border-color: #146c43 !important;
+        }
+        
+        .voting-interface .btn-danger:hover {
+          background-color: #b02a37 !important;
+          border-color: #a02834 !important;
+        }
+        
+        /* Ensure buttons are visible and have proper transitions */
+        .voting-interface .btn {
+          transition: all 0.2s ease-in-out;
+          opacity: 1;
+        }
+        
+        .add-to-itinerary-btn {
+          transition: all 0.2s ease-in-out;
+          opacity: 1;
         }
       `}</style>
     </AppLayout>

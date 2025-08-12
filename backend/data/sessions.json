@@ -16,6 +16,24 @@
           "price": 30,
           "rating": 4.2,
           "type": "activity"
+        },
+        {
+          "id": "act-2",
+          "title": "Escape Room Challenge - Mystery Mansion",
+          "description": "Work together to solve puzzles and escape within 60 minutes",
+          "location": "456 Adventure Ave",
+          "price": 45,
+          "rating": 4.8,
+          "type": "activity"
+        },
+        {
+          "id": "act-1",
+          "title": "Team Lunch at The Italian Corner",
+          "description": "Authentic Italian cuisine with vegetarian and vegan options",
+          "location": "123 Downtown St",
+          "price": 35,
+          "rating": 4.5,
+          "type": "restaurant"
         }
       ],
       "startDate": null,
@@ -28,15 +46,6 @@
       "requireConsensus": false,
       "autoSchedule": true
     },
-    "participants": [
-      {
-        "id": "00fb7886-cb94-4e11-9f93-e6e58638c952",
-        "name": "Eli Russell",
-        "socketId": "Xr2s3Y5n44_sVh38AAAB",
-        "joinedAt": "2025-08-12T12:45:49.643Z",
-        "presence": "active",
-        "cursor": null
-      }
-    ]
+    "participants": []
   }
 ]

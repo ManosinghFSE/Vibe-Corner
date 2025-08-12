@@ -43,7 +43,7 @@ export const LoginPage: React.FC = () => {
             <div className="d-flex align-items-center gap-3 mb-4 mb-md-5">
               <div className="logo-tile">VC</div>
               <div>
-                <div className="fs-4 fw-semibold">Vibe Cooler</div>
+                <div className="fs-4 fw-semibold">VibeCorner</div>
                 <div className="small opacity-90">Connect. Plan. Celebrate.</div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-# Vibe Cooler Backend (Mock Auth)
+# VibeCorner Backend (Mock Auth)
 
 Quick start:
 

@@ -452,7 +452,7 @@ const StoryEditor: React.FC<{ storyId: string }> = ({ storyId }) => {
           <div className="container py-4">
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <button className="btn btn-link text-white" onClick={() => navigate('/storycraft')}>
+                <button className="btn btn-secondary" onClick={() => navigate('/storycraft')}>
                   <i className="fas fa-arrow-left me-2"></i>Back to Stories
                 </button>
                 <h1 className="text-white mb-0">{story.title}</h1>

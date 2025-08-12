@@ -277,7 +277,7 @@ function generateICS(e) {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Vibe Cooler//EventGrid//EN',
+            'PRODID:-//VibeCorner//EventGrid//EN',
     'BEGIN:VEVENT',
     `UID:${e.id}`,
     `DTSTAMP:${dt(new Date().toISOString())}`,
