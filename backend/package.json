@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon --watch src --ext js,mjs,cjs --signal SIGTERM src/index.js"
+    "dev": "nodemon --watch src --ext js,mjs,cjs --signal SIGTERM src/index.js",
+    "test": "NODE_ENV=test jest --testTimeout=10000 --forceExit",
+    "test:watch": "NODE_ENV=test jest --watch --testTimeout=10000",
+    "test:coverage": "NODE_ENV=test jest --coverage --testTimeout=10000 --forceExit"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +40,28 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "lcov", "html"]
   }
 }
