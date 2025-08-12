@@ -1,0 +1,123 @@
+.birthdayContainer {
+  padding: 20px;
+}
+
+.birthdayList {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.birthdayItem {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 8px;
+}
+
+.birthdayItem:hover {
+  background-color: var(--vc-hover);
+}
+
+.birthdayItem.selected {
+  background-color: var(--vc-primary);
+  color: white;
+}
+
+.birthdayItem.today {
+  border: 2px solid var(--vc-danger);
+}
+
+.birthdayAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--vc-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.messagesContainer {
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.messagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.messageCard {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.messageSticker {
+  font-size: 2rem;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+
+.messageContent {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.messageAuthor {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+.messageComposer {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.stickerSelector {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stickerBtn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  background: white;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.stickerBtn:hover {
+  transform: scale(1.1);
+}
+
+.stickerBtn.selected {
+  border-color: var(--vc-primary);
+  background-color: var(--vc-primary-light);
+}
+
+@media (max-width: 768px) {
+  .messagesGrid {
+    grid-template-columns: 1fr;
+  }
+} 

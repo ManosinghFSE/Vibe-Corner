@@ -1,0 +1,417 @@
+/* StoryCraft Main Styles */
+.storycraft-page {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.parallax-container {
+  position: relative;
+  perspective: 1000px;
+  min-height: 100vh;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.background-layer {
+  transform: translateZ(-200px) scale(2);
+  opacity: 0.3;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9) 100px);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+/* Story List Styles */
+.story-list-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.story-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.story-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.story-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.story-card.theme-fantasy::before { background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); }
+.story-card.theme-scifi::before { background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); }
+.story-card.theme-horror::before { background: linear-gradient(90deg, #434343 0%, #000000 100%); }
+.story-card.theme-romance::before { background: linear-gradient(90deg, #fa709a 0%, #fee140 100%); }
+.story-card.theme-adventure::before { background: linear-gradient(90deg, #30cfd0 0%, #330867 100%); }
+.story-card.theme-mystery::before { background: linear-gradient(90deg, #8E2DE2 0%, #4A00E0 100%); }
+
+.story-card-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.story-card-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* Story Editor Styles */
+.story-editor-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.story-header-parallax {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform-style: preserve-3d;
+}
+
+.story-header-parallax .parallax-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.theme-fantasy .story-header-parallax { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.theme-scifi .story-header-parallax { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.theme-horror .story-header-parallax { background: linear-gradient(135deg, #434343 0%, #000000 100%); }
+.theme-romance .story-header-parallax { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.theme-adventure .story-header-parallax { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+.theme-mystery .story-header-parallax { background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%); }
+
+/* Story Timeline */
+.story-timeline {
+  padding: 3rem 2rem;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.timeline-node {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/* Scene Cards */
+.scene-card {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  animation: slideInFromLeft 0.6s ease-out backwards;
+}
+
+.scene-card:hover {
+  transform: translateY(-10px) translateZ(50px) rotateY(5deg);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.scene-card.active {
+  border: 2px solid #667eea;
+  transform: scale(1.05) translateZ(100px);
+}
+
+.scene-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.scene-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.scene-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scene-actions .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.scene-preview {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scene-preview::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+.scene-media-indicator {
+  margin-top: 1rem;
+  color: #999;
+  font-size: 0.875rem;
+}
+
+/* Active Scene Viewer */
+.active-scene-viewer {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.active-scene-viewer h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.scene-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.scene-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Rich Text Editor */
+.rich-editor-container {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.editor-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.toolbar-btn {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toolbar-btn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.toolbar-separator {
+  width: 1px;
+  background: #ddd;
+  margin: 0 0.5rem;
+}
+
+.rich-editor {
+  min-height: 300px;
+  padding: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  outline: none;
+}
+
+.rich-editor:focus {
+  background: #fafafa;
+}
+
+.rich-editor[placeholder]:empty::before {
+  content: attr(placeholder);
+  color: #999;
+  font-style: italic;
+}
+
+/* Empty States */
+.empty-state {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.empty-state i {
+  color: #ddd;
+  animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* Modal Overrides */
+.modal.show {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-dialog {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .story-header-parallax {
+    height: 200px;
+  }
+  
+  .timeline-track {
+    padding: 1rem;
+  }
+  
+  .scene-card {
+    width: 250px;
+  }
+  
+  .active-scene-viewer {
+    padding: 2rem;
+    margin: 2rem 1rem;
+  }
+}
+
+/* Theme-specific animations */
+.theme-fantasy .scene-card {
+  background: linear-gradient(135deg, rgba(240,147,251,0.1) 0%, rgba(245,87,108,0.1) 100%);
+}
+
+.theme-scifi .scene-card {
+  background: linear-gradient(135deg, rgba(79,172,254,0.1) 0%, rgba(0,242,254,0.1) 100%);
+}
+
+.theme-horror .scene-card {
+  background: linear-gradient(135deg, rgba(67,67,67,0.1) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.theme-romance .scene-card {
+  background: linear-gradient(135deg, rgba(250,112,154,0.1) 0%, rgba(254,225,64,0.1) 100%);
+}
+
+.theme-adventure .scene-card {
+  background: linear-gradient(135deg, rgba(48,207,208,0.1) 0%, rgba(51,8,103,0.1) 100%);
+}
+
+.theme-mystery .scene-card {
+  background: linear-gradient(135deg, rgba(142,45,226,0.1) 0%, rgba(74,0,224,0.1) 100%);
+} 

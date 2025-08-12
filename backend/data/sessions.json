@@ -1,0 +1,42 @@
+[
+  {
+    "id": "471a22ca-e03b-479c-9fcb-56c7052ac264",
+    "name": "Q4 team outing",
+    "creatorId": "00fb7886-cb94-4e11-9f93-e6e58638c952",
+    "createdAt": "2025-08-12T12:07:02.166Z",
+    "endedAt": null,
+    "status": "active",
+    "itinerary": {
+      "items": [
+        {
+          "id": "act-4",
+          "title": "Bowling & Arcade Night",
+          "description": "Classic bowling with modern arcade games and prizes",
+          "location": "321 Fun Plaza",
+          "price": 30,
+          "rating": 4.2,
+          "type": "activity"
+        }
+      ],
+      "startDate": null,
+      "endDate": null
+    },
+    "comments": {},
+    "settings": {
+      "votingEnabled": true,
+      "anonymousVoting": false,
+      "requireConsensus": false,
+      "autoSchedule": true
+    },
+    "participants": [
+      {
+        "id": "00fb7886-cb94-4e11-9f93-e6e58638c952",
+        "name": "Eli Russell",
+        "socketId": "EFBS9xPX5cKRcdebAAAD",
+        "joinedAt": "2025-08-12T12:07:02.203Z",
+        "presence": "active",
+        "cursor": null
+      }
+    ]
+  }
+]
